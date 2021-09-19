@@ -14,8 +14,8 @@
     ],
     "redirects": [
           {
-            "source": "/:appid_callback_deep_link*",
-            "destination": "com.mlbd.demo.ca93ef15-1572-4a61-ba49-b17bb901d9ae://mlbd-serverless.web.app/:appid_callback_deep_link",
+            "source": "/:authredirect*",
+            "destination": "com.mlbd.demo.ca93ef15-1572-4a61-ba49-b17bb901d9ae://mlbd-serverless.web.app/:authredirect",
             "type": 302
           }
         ]
