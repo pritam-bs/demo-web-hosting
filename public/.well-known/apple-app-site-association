@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "XYSCZDXKR7.com.mlbd.auth.debug",
+        "paths": [
+          "/authredirect"
+        ]
+      }
+    ]
+  }
+}
