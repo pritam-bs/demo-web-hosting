@@ -1,23 +1,35 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
-    "redirects": [
-          {
-            "source": "/:authredirect*",
-            "destination": "com.mlbd.demo.ca93ef15-1572-4a61-ba49-b17bb901d9ae://mlbd-serverless.web.app/:authredirect",
-            "type": 302
-          }
-        ]
-  }
+   "hosting":{
+      "public":"public",
+      "ignore":[
+         "firebase.json",
+         "**/.*",
+         "**/node_modules/**"
+      ],
+      "rewrites":[
+         {
+            "source":"**",
+            "destination":"/index.html"
+         }
+      ],
+      "headers":[
+         {
+            "source":"/.well-known/apple-app-site-association",
+            "headers":[
+               {
+                  "key":"Content-Type",
+                  "value":"application/json"
+               }
+            ]
+         }
+      ],
+      "appAssociation":"NONE",
+      "redirects":[
+         {
+            "source":"/:https-link-to-deep-link*",
+            "destination":"com.mlbd.demo.ca93ef15-1572-4a61-ba49-b17bb901d9ae://mlbd-serverless.web.app/:https-link-to-deep-link",
+            "type":302
+         }
+      ]
+   }
 }
